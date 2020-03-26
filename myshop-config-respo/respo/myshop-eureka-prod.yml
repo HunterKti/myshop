@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: myshop-eureka
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://myshop.ubuntu.com:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false

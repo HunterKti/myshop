@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888/
+      label: master
+      name: myshop-web-admin,myshop-common-web,myshop-client-eureka,myshop-client-admin,myshop-client-zipkin
+      profile: dev

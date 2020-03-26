@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      label: master
+      uri: http://myshop.local.com:8888/
+      name: myshop-zipkin,myshop-client-eureka,myshop-client-admin
+      profile: prod

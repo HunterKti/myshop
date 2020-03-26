@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: myshop-web-admin
+
+server:
+  port: 8200
