@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  myshop-web-admin:
+    image: 10.211.55.12:5000/myshop-web-admin
+    container_name: myshop-web-admin
+    ports:
+      - 8200:8200
+    networks:
+      - myshop-web-admin-network
+
+networks:
+  myshop-web-admin-network:

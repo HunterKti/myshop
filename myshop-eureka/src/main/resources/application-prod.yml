@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       label: master
-      uri: http://localhost:8888/
+      uri: http://git.ubuntu.com:8888/
       name: myshop-eureka,myshop-client-admin,myshop-client-zipkin
-      profile: dev
+      profile: prod

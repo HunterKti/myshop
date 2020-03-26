@@ -1,0 +1,30 @@
+stages:
+  - build
+  - push
+  - run
+  - clean
+
+build:
+  stage: build
+  script:
+    - /usr/local/maven/apache-maven-3.5.4/bin/mvn clean package -Dmaven.test.skip=true
+    - mv target/myshop-web-admin-1.0.0-SNAPSHOT.jar docker/app.jar
+    - cd docker
+    - docker build -t 10.211.55.12:5000/myshop-web-admin .
+
+push:
+  stage: push
+  script:
+    - docker push 10.211.55.12:5000/myshop-web-admin
+
+run:
+  stage: run
+  script:
+    - cd docker
+    - docker-compose down
+    - docker-compose up -d
+
+clean:
+  stage: clean
+  script:
+    - docker rmi $(docker images -q -f dangling=true)

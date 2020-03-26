@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  myshop-zipkin:
+    image: 10.211.55.12:5000/myshop-zipkin
+    container_name: myshop-zipkin
+    ports:
+      - 9411:9411
+    networks:
+      - myshop-zipkin-network
+
+networks:
+  myshop-zipkin-network:

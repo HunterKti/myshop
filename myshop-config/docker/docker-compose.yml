@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  myshop-config:
+    image: 10.211.55.12:5000/myshop-config
+    container_name: myshop-config
+    ports:
+      - 8888:8888
+    networks:
+      - myshop-config-network
+
+networks:
+  myshop-config-network:

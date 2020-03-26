@@ -1,25 +1,7 @@
 spring:
-  application:
-    name: myshop-admin
-  zipkin:
-    base-url: http://localhost:9411/
-
-server:
-  port: 8084
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    registry-fetch-interval-seconds: 5
-  instance:
-    lease-renewal-interval-in-seconds: 10
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:8888/
+      name: myshop-admin,myshop-client-eureka,myshop-client-zipkin
+      profile: dev

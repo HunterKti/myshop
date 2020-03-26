@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  myshop-eureka:
+    image: 10.211.55.12:5000/myshop-eureka
+    container_name: myshop-eureka
+    ports:
+      - 8084:8084
+    networks:
+      - myshop-eureka-network
+
+networks:
+  myshop-eureka-network:
