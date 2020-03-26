@@ -1,29 +1,29 @@
 cd ..
 
 cd myshop-dependencies
-mvn clean
+mvn clean deploy -Dmaven.test.skip=true
 cd ..
 
 cd myshop-config
-mvn clean 
+mvn clean package -Dmaven.test.skip=true
 cd ..
 
 cd myshop-eureka
-mvn clean
+mvn clean package -Dmaven.test.skip=true
 cd ..
 
 cd myshop-zipkin
-mvn clean
+mvn clean package -Dmaven.test.skip=true
 cd ..
 
 cd myshop-admin
-mvn clean
+mvn clean package -Dmaven.test.skip=true
 cd ..
 
 cd myshop-service-admin
-mvn clean
+mvn clean package -Dmaven.test.skip=true
 cd ..
 
 cd myshop-web-admin
-mvn clean
+mvn clean package -Dmaven.test.skip=true
 cd ..
